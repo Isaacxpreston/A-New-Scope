@@ -36,7 +36,7 @@ module.exports = function(app, express, gfs, fsFile) {   // these params are are
         console.log('file not in db');
         res.end();
       } else {
-        const writestream = fs.createWriteStream(`./src/client/imports/${req.body.filename}`); //write to imports folder
+        const writestream = fs.createWriteStream(`../client/imports/${req.body.filename}`); //write to imports folder
         const readstream = gfs.createReadStream({ //read from mongodb
           filename: req.body.filename
           //search by user, search by animation HERE
